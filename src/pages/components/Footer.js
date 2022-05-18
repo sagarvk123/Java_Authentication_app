@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import { CreateAccount, LogIn, DonateButton } from "../../buttons"
+import { Link } from "react-router-dom";
+import { CreateAccount, LogIn } from "../../buttons";
 
 export default function Footer() {
   return (
@@ -36,23 +36,10 @@ export default function Footer() {
             <li className="my-5">
               <LogIn />
             </li>
-            <li>
-              <DonateButton />
-            </li>
           </ul>
-          <p className="text-slate-200">
-            Built by{" "}
-            <a
-              href="https://tsbsankara.netlify.app"
-              target="_blank"
-              rel="noreferrer"
-              className="underline hover:text-slate-50"
-            >
-              Thomas Sankara
-            </a>
-          </p>
+          <p className="text-slate-200">Built by Sagar Gupta</p>
         </footer>
       </div>
     </>
-  )
+  );
 }

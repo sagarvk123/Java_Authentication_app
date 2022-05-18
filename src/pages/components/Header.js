@@ -1,27 +1,27 @@
-import React, { useState, useContext } from "react"
-import { Link } from "react-router-dom"
-import AuthContext from "../../context/auth"
-import { navbar } from "../../data/data"
-import { CreateAccount, DonateButton, LogOut } from "../../buttons"
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import AuthContext from "../../context/auth";
+import { navbar } from "../../data/data";
+import { CreateAccount, LogOut } from "../../buttons";
 
 export default function Header() {
-  const [links] = useState(navbar)
-  const { user } = useContext(AuthContext)
-  const [isOpen, setIsOpen] = useState(false)
+  const [links] = useState(navbar);
+  const { user } = useContext(AuthContext);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
-    setIsOpen(true)
-    const navbar = document.querySelector(".navbar")
-    const listItems = document.querySelectorAll(".list-item")
+    setIsOpen(true);
+    const navbar = document.querySelector(".navbar");
+    const listItems = document.querySelectorAll(".list-item");
 
-    navbar.classList.toggle("open")
-    setIsOpen(!isOpen)
+    navbar.classList.toggle("open");
+    setIsOpen(!isOpen);
 
     listItems.forEach((item) => {
-      item.addEventListener("click", () => navbar.classList.remove("open"))
-      setIsOpen(false)
-    })
-  }
+      item.addEventListener("click", () => navbar.classList.remove("open"));
+      setIsOpen(false);
+    });
+  };
 
   return (
     <>
@@ -45,9 +45,6 @@ export default function Header() {
             ))}
 
             <li>{user ? <LogOut /> : <CreateAccount />}</li>
-            <li>
-              <DonateButton />
-            </li>
           </ul>
         </nav>
 
@@ -61,5 +58,5 @@ export default function Header() {
         </div>
       </header>
     </>
-  )
+  );
 }

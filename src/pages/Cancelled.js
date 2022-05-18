@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function Cancelled() {
   return (
@@ -15,5 +15,5 @@ export default function Cancelled() {
         </button>
       </section>
     </>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { CreateAccount, LogIn } from "../buttons"
-import hero from "../images/invoicerv2.png"
+import { CreateAccount, LogIn } from "../buttons";
+import hero from "../images/invoicerv2.png";
 
 export default function Home() {
   return (
@@ -32,20 +32,6 @@ export default function Home() {
                   <LogIn />
                 </li>
               </ul>
-
-              <div>
-                <p className="text-slate-700 mt-5 text-center md:text-left">
-                  Do you like Invoicer? Check out my other app called{" "}
-                  <a
-                    href="https://diarry.netlify.app"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="underline text-slate-700"
-                  >
-                    Diarry
-                  </a>
-                </p>
-              </div>
             </article>
 
             <article className="hidden md:block">
@@ -62,5 +48,5 @@ export default function Home() {
 
       <div className="slant"></div>
     </>
-  )
+  );
 }

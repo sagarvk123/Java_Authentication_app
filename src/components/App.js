@@ -1,48 +1,48 @@
-import { useState, useRef, useEffect } from "react"
-import ClientDetails from "./ClientDetails"
-import Dates from "./Dates"
-import Footer from "./Footer"
-import Header from "./Header"
-import MainDetails from "./MainDetails"
-import Notes from "./Notes"
-import Table from "./Table"
-import TableForm from "./TableForm"
-import ReactToPrint from "react-to-print"
-import { DonateButton } from "../buttons"
+import { useState, useRef, useEffect } from "react";
+import ClientDetails from "./ClientDetails";
+import Dates from "./Dates";
+import Footer from "./Footer";
+import Header from "./Header";
+import MainDetails from "./MainDetails";
+import Notes from "./Notes";
+import Table from "./Table";
+import TableForm from "./TableForm";
+import ReactToPrint from "react-to-print";
+//import { DonateButton } from "../buttons"
 
 function App() {
-  const [name, setName] = useState("")
-  const [address, setAddress] = useState("")
-  const [email, setEmail] = useState("")
-  const [phone, setPhone] = useState("")
-  const [bankName, setBankName] = useState("")
-  const [bankAccount, setBankAccount] = useState("")
-  const [website, setWebsite] = useState("")
-  const [clientName, setClientName] = useState("")
-  const [clientAddress, setClientAddress] = useState("")
-  const [invoiceNumber, setInvoiceNumber] = useState("")
-  const [invoiceDate, setInvoiceDate] = useState("")
-  const [dueDate, setDueDate] = useState("")
-  const [notes, setNotes] = useState("")
-  const [description, setDescription] = useState("")
-  const [quantity, setQuantity] = useState("")
-  const [price, setPrice] = useState("")
-  const [amount, setAmount] = useState("")
-  const [list, setList] = useState([])
-  const [total, setTotal] = useState(0)
-  const [width] = useState(641)
+  const [name, setName] = useState("");
+  const [address, setAddress] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [bankName, setBankName] = useState("");
+  const [bankAccount, setBankAccount] = useState("");
+  const [website, setWebsite] = useState("");
+  const [clientName, setClientName] = useState("");
+  const [clientAddress, setClientAddress] = useState("");
+  const [invoiceNumber, setInvoiceNumber] = useState("");
+  const [invoiceDate, setInvoiceDate] = useState("");
+  const [dueDate, setDueDate] = useState("");
+  const [notes, setNotes] = useState("");
+  const [description, setDescription] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [price, setPrice] = useState("");
+  const [amount, setAmount] = useState("");
+  const [list, setList] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [width] = useState(641);
 
-  const componentRef = useRef()
+  const componentRef = useRef();
 
   const handlePrint = () => {
-    window.print()
-  }
+    window.print();
+  };
 
   useEffect(() => {
     if (window.innerWidth < width) {
-      alert("Place your phone in landscape mode for the best experience")
+      alert("Place your phone in landscape mode for the best experience");
     }
-  }, [width])
+  }, [width]);
 
   return (
     <>
@@ -261,9 +261,7 @@ function App() {
             </button> */}
             </div>
           </div>
-          <article className="mt-5">
-            <DonateButton />
-          </article>
+          <article className="mt-5"></article>
         </section>
 
         {/* Invoice Preview */}
@@ -324,7 +322,7 @@ function App() {
         </div>
       </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
